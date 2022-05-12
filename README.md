@@ -37,3 +37,6 @@ done
 # FAQ
 Q: does this just moves the files to the bin and i have to manually empty it?
 A: nope, it deletes it immediately :)
+
+Q: is a virus?
+A: no :(, you can read the code yourself in `app.py` literally 20 lines of code
