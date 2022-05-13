@@ -41,4 +41,5 @@ A: as of right now it only deletes the normal temp folder (`C:\Users\comp\AppDat
    - C:\Windows\Prefetch
    - C:\Windows\Offline Web Pages
    - recycle bin
+
   I'll make a config file where you can choose which folders to be deleted easily
