@@ -1,22 +1,26 @@
 import tempfile
 import os
+import shutil
 
 # get the temp folder's path
 temppath = tempfile.mkdtemp()
+temppath = os.path.dirname(temppath)
 
+print("-----Deleting files-----")
 # ... delete every file in the temp folder
-for root, dirs, files in os.walk(os.path.dirname(temppath)):
+for root, dirs, files in os.walk(temppath):
     for file in files:
         try:
             os.remove(os.path.join(root, file))
         except Exception as e:
             print(str(e))
 
+print("-----Deleting folders-----")
 # ... delete every folder in the temp folder
-for root, dirs, files in os.walk(os.path.dirname(temppath)):
-    for dir in dirs:
+for folder in os.listdir(temppath):
+    if os.path.isdir(temppath + os.sep +folder):
         try:
-            os.remove(root)
+            shutil.rmtree(temppath + os.sep + folder)
         except Exception as e:
             print(str(e))
 
