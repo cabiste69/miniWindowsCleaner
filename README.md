@@ -1,9 +1,11 @@
 # miniWindowsCleaner
-this is a small scripts that cleans windows from useless files (temp folder)
+this is a small script that cleans windows from useless files (temp folders)
 
 # how to use
 download the latest release from here https://github.com/cabiste69/miniWindowsCleaner/releases/latest
+
 then make a shortcut of the app and place it in the windows startup folder `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp`
+
 that way it will run when the pc turns on
 
 # intent 
