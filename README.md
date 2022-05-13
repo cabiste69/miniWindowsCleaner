@@ -10,7 +10,7 @@ that way it will run when the pc turns on
 
 # intent 
 obviously this app sounds stupid "huh? it just deletes the temp folder? i can do that manually"
-well yeah but it will save you a bit of time so why not ¯\\_(ツ)_/¯
+well yeah but it will save you a bit of time so why not ¯\\\_(ツ)\_/¯
 the app is meant to run once one you turn on your machine, clean it then you never see it again
 
 # how to build
