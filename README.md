@@ -25,13 +25,16 @@ none :)
 
 # FAQ
 Q: does this just moves the files to the bin and i have to manually empty it?
+
 A: nope, it deletes it immediately :)
 
 Q: is a virus?
+
 A: no :(, you can read the code yourself in `app.py` literally 20 lines of code
 
 Q: what folders are deleted exactly?
-A: as of right now it only deletes the normal temp folder (C:\Users\comp\AppData\Local\Temp) but i'll be adding these other folders in the near future
+
+A: as of right now it only deletes the normal temp folder (`C:\Users\comp\AppData\Local\Temp`), but i'll be adding these other folders in the near future
    - C:\Windows\Temp
    - C:\Windows.old
    - C:\Windows\Downloaded Program Files
