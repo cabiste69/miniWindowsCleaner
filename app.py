@@ -1,4 +1,5 @@
 import os
+import sys
 import tempfile
 from shutil import rmtree
 from winshell import recycle_bin
@@ -8,7 +9,7 @@ sp = os.sep
 emptyBin = False
 
 def CreateConfigFile(path):
-    print("creating config file...")
+    print("creating config file in: "+path)
     # get windows' folder's path
     winpath = os.environ['WINDIR']
     x = [
@@ -28,7 +29,7 @@ def CreateConfigFile(path):
 def ReadConfigFile():
     print("reading the config file")
     
-    cfgPath = os.path.dirname(__file__) + sp + "config.cfg"
+    cfgPath = os.path.dirname(os.path.abspath(sys.executable)) + sp + "config.cfg"
     folders = []
     
     if not os.path.exists(cfgPath):
@@ -48,17 +49,18 @@ def ReadConfigFile():
 
 
 def DeleteTemps(folders):
-    
+    print("trying to delete "+ str(len(folders))+ " folders")
     for folder in folders:
         if not os.path.isdir(folder):
             continue
         
-        print("------deleting: "+ folder+"------")
+        print("--------deleting: "+ folder+"--------")
         
         print("Deleting files")
         # ... delete every file in the folder
         for root, dirs, files in os.walk(folder):
             for file in files:
+                # so it doesn't delete the desktop by mistake :)
                 if file == "desktop.ini":
                     continue
                 
@@ -68,7 +70,7 @@ def DeleteTemps(folders):
                     print(str(e))
 
         print("Deleting folders")
-        # ... delete every folder in the folder
+        # delete every subfolder in the folder
         for file in os.listdir(folder):
             if os.path.isdir(folder + sp + file):
                 try:
