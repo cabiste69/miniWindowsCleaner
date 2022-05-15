@@ -1,4 +1,5 @@
 tests/
+upx-3.96-win64/
 *.cfg
 # Byte-compiled / optimized / DLL files
 __pycache__/

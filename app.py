@@ -1,6 +1,6 @@
 import os
-import shutil
 import tempfile
+from shutil import rmtree
 from winshell import recycle_bin
 
 
@@ -72,7 +72,7 @@ def DeleteTemps(folders):
         for file in os.listdir(folder):
             if os.path.isdir(folder + sp + file):
                 try:
-                    shutil.rmtree(folder + sp + file)
+                    rmtree(folder + sp + file)
                 except Exception as e:
                     print(str(e))
     
