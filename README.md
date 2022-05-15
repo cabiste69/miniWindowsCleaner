@@ -49,6 +49,7 @@ A: no :(, you can read the code yourself in `app.py` it's less than 100 lines of
 Q: Why is the file size so large? (10Mb)
 
 A: idk, i'm using pyinstaller and upx `pyinstaller -F --onefile --upx-dir=upx-3.96-win64/ app.py`, if you know how to do it better then please create an issue
+
 ---
 
 Q: What folders are deleted exactly?
