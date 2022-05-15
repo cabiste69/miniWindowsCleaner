@@ -2,10 +2,8 @@
 This is a small script that cleans windows from useless files (temp folders)
 
 # intent 
-Obviously this app sounds stupid, "huh? it just deletes the temp folders? i can do that manually"
-
-Well yeah that's correct but this app will save you a bit of time so why not ¯\\\_(ツ)\_/¯
-
+Obviously this app sounds stupid, "huh? it just deletes the temp folders? i can do that manually"  
+Well yeah that's correct but this app will save you a bit of time so why not ¯\\\_(ツ)\_/¯  
 The app is meant to run once one you turn on your machine, clean it then you never see it again
 
 # how to use
@@ -29,8 +27,7 @@ That way it will run when the pc turns on
 2. Compile the source code `pyinstaller -F app.py`
    - `-F` so it compiles everything into 1 single file
 
-This should give you an exe that you'll find in `dist/app.exe`,
-
+This should give you an exe that you'll find in `dist/app.exe`,  
 Copy that app to another folder so you don't forget about it just in case
 
 # known issues 
@@ -60,6 +57,6 @@ A: It deletes the windows temp folders that are known to be safe:
    - C:\Windows.old (disabled by default)
    - recycle bin (disabled by default)
 
-  *The app will creat a config file in the folder you place it in*
-  *You can enable/disable the folders to be deleted by adding a `#` before them*
-  *You can add your own folders by just typing them in a new line*
+  *The app will creat a config file in the folder you place it in*  
+  *You can enable/disable the folders to be deleted by adding a `#` before them*  
+  *You can add your own folders by just typing them in a new line*  
