@@ -54,9 +54,9 @@ def DeleteTemps(folders):
         if not os.path.isdir(folder):
             continue
         
-        print("--------deleting: "+ folder+"--------")
+        print("\n--------deleting: "+ folder+"--------")
         
-        print("Deleting files")
+        print("Deleting files...")
         # ... delete every file in the folder
         for root, dirs, files in os.walk(folder):
             for file in files:
@@ -69,7 +69,7 @@ def DeleteTemps(folders):
                 except Exception as e:
                     print(str(e))
 
-        print("Deleting folders")
+        print("Deleting folders..")
         # delete every subfolder in the folder
         for file in os.listdir(folder):
             if os.path.isdir(folder + sp + file):
