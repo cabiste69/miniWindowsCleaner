@@ -48,7 +48,7 @@ A: no :(, you can read the code yourself in `app.py` it's less than 100 lines of
 
 Q: Why is the file size so large? (10Mb)
 
-A: idk, i'm using pyinstaller and upx `pyinstaller -F --onefile --upx-dir=upx-3.96-win64/ app.py`, if you know how to do it better then please create an issue
+A: idk, I'm using pyinstaller and upx `pyinstaller -F --onefile --upx-dir=upx-3.96-win64/ app.py`, if you know of a better way to compile it then please create an issue
 
 ---
 
@@ -63,6 +63,6 @@ A: It deletes the windows temp folders that are known to be safe:
    - C:\Windows.old (disabled by default)
    - recycle bin (disabled by default)
 
-  *The app will creat a config file in the folder you place it in*  
+  *The app will create a config file in the folder you place it in*  
   *You can enable/disable the folders to be deleted by adding a `#` before them*  
   *You can add your own folders by just typing them in a new line*  
