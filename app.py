@@ -10,8 +10,10 @@ emptyBin = False
 
 def CreateConfigFile(path):
     print("creating config file in: "+path)
+    
     # get windows' folder's path
     winpath = os.environ['WINDIR']
+    
     x = [
             os.path.dirname(tempfile.mkdtemp()), # normal temporary folder (%temp%)
             winpath + sp + "Temp", # windows specific temp folder
@@ -30,9 +32,11 @@ def ReadConfigFile():
     print("reading the config file")
     
     cfgPath = os.path.dirname(os.path.abspath(sys.executable)) + sp + "config.cfg"
+    print("config file is at: "+cfgPath)
     folders = []
     
     if not os.path.exists(cfgPath):
+        print("config file doesn't exist")
         CreateConfigFile(cfgPath)
         
     with open(cfgPath) as file:
@@ -42,7 +46,9 @@ def ReadConfigFile():
                 if line == "recycleBin":
                     global emptyBin
                     emptyBin = True
+                    print("recycle bin is active")
                 else:
+                    print(line)
                     folders.append(line)
     
     return folders
